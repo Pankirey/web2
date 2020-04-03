@@ -16,6 +16,7 @@ def product_detail(request, product_id):
         return JsonResponse({'error': str(e)})
     return JsonResponse(product.to_json())
 
+
 def category_list(request):
     categories = Category.objects.all()
     json_categories = [c.to_json() for c in categories]
