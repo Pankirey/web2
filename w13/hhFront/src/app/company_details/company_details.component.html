@@ -1,0 +1,15 @@
+<a routerLink="/companies">Companies</a>
+<br>
+<a routerLink="/vacancies">Vacancies</a>
+<br>
+<br>
+
+<p>Id: {{ company.id }}</p>
+<p>Name: {{ company.name}}</p>
+<p>Available Vacancies: {{vacancies.length}}</p>
+<div *ngFor="let vacancy of vacancies">
+  <a>{{ vacancy.name }}</a>
+</div>
+<br>
+<button (click)="goBack()">Back</button>
+<br>
